@@ -43,8 +43,7 @@ $('#submit').on('click', function(event) {
     console.log(friendsArray)
 })
 
-
-
+// Is this choking things?
+module.exports = friendsArray;
 });
 
-module.exports = friendsArray;
