@@ -5,7 +5,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 // This is also throwing an error about not finding a module
-// var friends = require("../data.friends.js")
+var friends = require("./app/data/friends.js")
 
 // Sets up the Express App
 // =============================================================
@@ -20,8 +20,8 @@ app.use(bodyParser.text());
 
 
 // These throw an error, can't find module
-// require("./routing/apiRoutes")(app);
-// require("./routing/htmlRoutes")(app);
+var apiRoutes = require("./routing/apiRoutes")(app);
+var htmlRoutes = require("./routing/htmlRoutes")(app);
 
 
 app.listen(PORT, function() {

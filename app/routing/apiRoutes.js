@@ -1,5 +1,5 @@
 var path = require('path');
-
+var https = require("https")
 // Import the list of friend entries
 var friends = require('../data/friends.js');
 
@@ -43,7 +43,8 @@ module.exports = function(app) {
 
 				totalDifference = diff;
 				matchName = friends[i].name;
-				matchImage = friends[i].photo;
+                matchImage = friends[i].photo;
+                console.log(matchName)
 			}
 		}
 

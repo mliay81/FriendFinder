@@ -1,5 +1,6 @@
 // Pull in required dependencies
 var path = require('path');
+var https = require("https")
 
 // Export HTML routes
 module.exports = function(app) {
