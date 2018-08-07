@@ -5,30 +5,147 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS and the ol' JQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <script src="../data/friends.js"></script>
     <title>Survey</title>
     <style>
         body {padding-top: 3%; padding-left: 8%; padding-right: 8%;}
-
+        select {background-color: grey; color: white; border-radius: 4px;}
+        #submit {background-color: grey; color: white; border-radius: 4px; width: 100px; height: 35px; outline: none;}
     </style>
   </head>
   <body>
     <h3>Survey Questions</h3>
     <hr>
+    <h4>About You</h4>
     <p>Your Name (Required)</p>
     <div class="input-group mb-3">
-        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1"  id="name">
     </div>
     <p>Link to Photo of Yourself (Required)</p>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+    <div class="input-group mb-3" >
+        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" id="pic">
     </div>
     <hr>
+
+    <h4>Question 1</h4>
+    <h5>Dogs are pretty great, huh?</h5>
+    <select id="question1">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <br><br>
+    <h4>Question 2</h4>
+    <h5>And cats too?</h5>
+    <select id="question2">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <br><br>
+    <h4>Question 3</h4>
+    <h5>Cocktails are an acceptable dinner.</h5>
+    <select id="question3">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <br><br>
+    <h4>Question 4</h4>
+    <h5>Star Trek > Star Wars</h5>
+    <select id="question4">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <br><br>
+    <h4>Question 5</h4>
+    <h5>It's still sad that the Triple Rock closed.</h5>
+      <select id="question5">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+    <br><br>
+    <h4>Question 6</h4>
+    <h5>In your friend group, you're the George Costanza.</h5>
+    <select id="question6">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <br><br>
+    <h4>Question 7</h4>
+    <h5>Wanna bike this weekend?</h5>
+    <select id="question7">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <br><br>
+    <h4>Question 8</h4>
+    <h5>Real books are preferrable to a Kindle.</h5>
+    <select id="question8">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <br><br>
+    <h4>Question 9</h4>
+    <h5>The Five Second Rule is immutable law.</h5>
+    <select id="question9">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <br><br>
+    <h4>Question 10</h4>
+    <h5>Uptown is still cool.</h5>
+    <select id="question10">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <br><br>
+    <button id="submit">Submit!</button>
+    <br><br>
     <!-- Optional JavaScript -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
