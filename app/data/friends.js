@@ -1,7 +1,24 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-var friendsArray = []
+var friendsArray = [
+    {
+        name: "Captain Jean-Luc Picard",
+        photo: "../images/picard.jpg",
+        scores: [
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "3",
+            "5",
+            "4", 
+            "4",
+            "1"
+        ]
+    }
+]
 
 $('#submit').on('click', function(event) {
     event.preventDefault();
@@ -29,3 +46,5 @@ $('#submit').on('click', function(event) {
 
 
 });
+
+module.exports = friendsArray;
