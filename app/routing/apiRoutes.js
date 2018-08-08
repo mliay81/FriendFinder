@@ -1,7 +1,7 @@
 var path = require('path');
 var https = require("https")
 // Import the list of friend entries
-var friends = require('../data/friends.js');
+// var friends = require('../data/friends.js');
 
 // Export API routes
 module.exports = function(app) {
